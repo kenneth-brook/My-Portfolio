@@ -1,35 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import me from "../me.jpg";
-
-const Background = styled.div`
-  background: white;
-  width: 100%;
-  padding-bottom: 20px;
-  padding-top: 5px;
-`;
-
-const ContentWrap = styled.div`
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-`;
-
-const Img = styled.img`
-  float: left;
-  border-radius: 50%;
-  width: 120px;
-  margin: 15px;
-`;
 
 function HomeContent() {
   return (
-    <Background>
-      <ContentWrap>
+    <div className="homeContBG">
+      <div className="contWrap">
         <p>
-          <Img src={me} alt="me" />
+          <img src={me} alt="me" />
           Lorizzle ipsum dolor crazy amizzle, consectetuer adipiscing fizzle.
           Nullizzle sapien velizzle, gizzle volutpizzle, boom shackalack
           quizzle, gravida vizzle, arcu. Pellentesque mofo phat. Sizzle erizzle.
@@ -55,8 +32,8 @@ function HomeContent() {
           erat.Mammasay mammasa mamma oo sa aliquet pizzle turpis.break yo neck,
           yall.
         </p>
-      </ContentWrap>
-    </Background>
+      </div>
+    </div>
   );
 }
 
