@@ -12,23 +12,23 @@ module.exports = {
 };
 
 function find() {
-  return db("cars");
+  return db("frontPosts");
 }
 
 function findById(id) {
-  return db("cars").where({ id: Number(id) });
+  return db("frontPosts").where({ id: Number(id) });
 }
 
 function insert(post) {
-  return db("cars")
+  return db("frontPosts")
     .insert(post)
     .then((ids) => ({ id: ids[0] }));
 }
 
 function update(id, post) {
-  return db("cars").where("id", Number(id)).update(post);
+  return db("frontPosts").where("id", Number(id)).update(post);
 }
 
 function remove(id) {
-  return db("cars").where("id", Number(id)).del();
+  return db("frontPosts").where("id", Number(id)).del();
 }
